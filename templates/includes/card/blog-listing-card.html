@@ -1,0 +1,31 @@
+{% load wagtailcore_tags navigation_tags wagtailimages_tags %}
+
+<div class="blog-post">
+    <a class="blog-listing-card__link"        href="{% if in_wagtail_serve %}{% pageurl blog %}{% else %}#{% endif %}">
+        
+        {% if blog.image %}
+            <figure class="blog-listing-card__image">
+                {% picture blog.image format-{avif,webp,jpeg} fill-600x338-c100 loading="lazy" %}
+            </figure>
+        {% endif %}
+        <div class="text-content">
+            <span><a href="#" class="golden-text">
+                {% if blog.date_published %}
+                    {{ blog.date_published }} \
+                {% endif %}
+                {% for author in blog.authors %}
+                    {{ author }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </a>
+            <div class="blog-listing-card__contents">
+                <h2 class="blog-listing-card__title">{{ blog.title }}</h2>
+                {% if blog.introduction %}
+                    <p class="blog-listing-card__introduction">{{ blog.introduction|truncatewords:15 }}</p>
+                {% endif %}
+                <div class="simple-btn">
+                    <a href="{% if in_wagtail_serve %}{% pageurl blog %}{% else %}#{% endif %}"</a>
+                </div>
+            </div>
+        </div> <!-- Missing closing tag for text-content -->
+    </a>
+</div>

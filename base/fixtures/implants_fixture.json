@@ -1,0 +1,53 @@
+[
+    {
+        "model": "breads.implantpage",
+        "pk": 1,
+        "fields": {
+            "title": "Titanium Dental Implant",
+            "slug": "titanium-dental-implant",
+            "introduction": "A durable titanium dental implant with superior osseointegration.",
+            "body": [
+                {
+                    "type": "text",
+                    "value": "This implant is ideal for patients looking for long-lasting solutions."
+                }
+            ],
+            "image": 7,
+            "origin": 1,
+            "implant_type": 1,
+            "materials": [
+                1,
+                2
+            ],
+            "live": true
+        }
+    },
+    {
+        "model": "breads.country",
+        "pk": 1,
+        "fields": {
+            "title": "USA"
+        }
+    },
+    {
+        "model": "breads.implanttype",
+        "pk": 1,
+        "fields": {
+            "title": "Titanium"
+        }
+    },
+    {
+        "model": "breads.implantmaterial",
+        "pk": 1,
+        "fields": {
+            "name": "Titanium"
+        }
+    },
+    {
+        "model": "breads.implantmaterial",
+        "pk": 2,
+        "fields": {
+            "name": "Zirconia"
+        }
+    }
+]

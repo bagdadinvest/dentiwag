@@ -1,0 +1,256 @@
+{% extends 'sitebase.html' %}
+{% load static i18n %}
+{% block content %}
+        <nav> 
+            <div class="logo"> <a href="{% url 'websites:home' %}">{% trans "MedTour Dental" %}</a> 
+            </div>             
+            <div class="menu-icon"> <span></span> 
+            </div>             
+        </nav>         
+        <div class="page-heading"> 
+            <div class="container"> 
+                <div class="heading-content"> 
+                    <h1>{% trans "Our Blog" %}</h1> 
+                </div>                 
+            </div>             
+        </div>         
+        <div class="blog-entries"> 
+            <div class="container"> 
+                <div class="col-md-9"> 
+                    <div class="blog-posts"> 
+                        <div class="row"> 
+                            <div class="col-md-12"> 
+                                <div class="blog-post"> 
+                                    <img src="{% static 'home/img/dental_implants_blog_1.png' %}" alt="{% trans "Dental Implants" %}"> 
+                                    <div class="text-content"> <span><a href="{% url 'websites:single-post' %}">{% trans "Admin" %}</a> / <a href="{% url 'websites:single-post' %}">{% trans "August 24, 2024" %}</a> / <a href="{% url 'websites:single-post' %}">{% trans "Dental Implants" %}</a></span> 
+                                        <h2>{% trans "Why Choose Dental Implants Abroad?" %} </h2> 
+                                        <p>{% trans "Dental implants have become a popular solution for those seeking to restore their smile, but the high costs in some countries can be prohibitive. This is where medical tourism comes into play. By choosing to get your dental implants abroad, you can save up to 70% on costs while receiving top-notch care in state-of-the-art facilities." %}</p> 
+                                        <div class="simple-btn"> <a href="{% url 'websites:single-post' %}">{% trans "Continue reading" %}</a> 
+                                        </div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="col-md-12"> 
+                                <div class="blog-post"> 
+                                    <img src="{% static 'home/img/dental_implants_blog_2.png' %}" alt="Affordable Dental Care"> 
+                                    <div class="text-content"> <span><a href="{% url 'websites:single-post' %}">{% trans "Admin" %}</a> / <a href="{% url 'websites:single-post' %}">{% trans "August 10, 2024" %}</a> / <a href="{% url 'websites:single-post' %}">{% trans "Cost Savings" %}</a></span> 
+                                        <h2>{% trans "Cost Savings: A Guide to Dental Implants in Medical Tourism" %}</h2> 
+                                        <p>{% trans "Medical tourism for dental implants not only offers cost savings but also gives patients access to world-renowned specialists. Learn how to plan your dental trip abroad and what to expect during your journey to a healthier, more confident smile." %}</p> 
+                                        <div class="simple-btn"> <a href="{% url 'websites:single-post' %}">{% trans "Continue reading" %}</a> 
+                                        </div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="col-md-12"> 
+                                <div class="blog-post"> 
+                                    <img src="{% static 'home/img/dental_implants_blog_3.png' %}" alt="Expert Dental Care Abroad"> 
+                                    <div class="text-content"> <span><a href="{% url 'websites:single-post' %}">{% trans "Admin" %}</a> / <a href="{% url 'websites:single-post' %}">{% trans "July 15, 2024" %}</a> / <a href="{% url 'websites:single-post' %}">{% trans "Patient Stories" %}</a></span> 
+                                        <h2>{% trans "Success Stories: Patients Who Found Their Perfect Smile Abroad" %}</h2> 
+                                        <p>{% trans "From initial consultations to final results, follow the journeys of patients who traveled abroad for dental implants. Discover how they overcame their dental issues and regained their confidence through affordable, high-quality care." %}</p> 
+                                        <div class="simple-btn"> <a href="{% url 'websites:single-post' %}">{% trans "Continue reading" %}</a> 
+                                        </div>                                         
+                                    </div>                                     
+                                </div>                                 
+                            </div>                             
+                            <div class="col-md-12"> 
+                                <ul class="page-number"> 
+                                    <li class="active"><a href="{% url 'websites:single-post' %}">1</a></li>                                     
+                                    <li><a href="{% url 'websites:single-post' %}">2</a></li>                                     
+                                    <li><a href="{% url 'websites:single-post' %}">3</a></li>                                     
+                                    <li><a href="{% url 'websites:single-post' %}">></a></li>                                     
+                                </ul>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+                <div class="col-md-3"> 
+                    <div class="side-bar"> 
+                        <div class="search"> 
+                            <fieldset> 
+                                <input name="search" type="text" class="form-control" id="search" placeholder="Search..." required=""> 
+                            </fieldset>                             
+                        </div>                         
+                        <div class="archives"> 
+                            <div class="sidebar-heding"> 
+                                <h2>{% trans "Archives" %}</h2> 
+                            </div>                             
+                            <ul> 
+                                <li><a href="{% url 'websites:single-post' %}">{% trans "> August 2024 (4)" %}</a></li>                                 
+                                <li><a href="{% url 'websites:single-post' %}">{% trans "> July 2024 (16)" %}</a></li>                                 
+                                <li><a href="{% url 'websites:single-post' %}">{% trans "> June 2024 (5)" %}</a></li>                                 
+                                <li><a href="{% url 'websites:single-post' %}">{% trans "> May 2024 (3)" %}</a></li>                                 
+                                <li><a href="{% url 'websites:single-post' %}">{% trans "> April 2024 (27)" %}</a></li>                                 
+                            </ul>                             
+                        </div>                         
+                        <div class="recent-posts"> 
+                            <div class="sidebar-heding"> 
+                                <h2>{% trans "Recent Posts" %}</h2> 
+                            </div>                             
+                            <ul> 
+                                <li><a href="{% url 'websites:single-post' %}"> <img src="{% static 'home/img/recent_post_1.png' %}" alt="Recent Post 1"> <div class="text"> 
+                                            <h6>Top Destinations for {% trans "Dental Implants" %}</h6> <span>{% trans "August 20, 2024" %}</span> 
+                                        </div>  
+                                </li>
+                            </a>                             
+                            <li><a href="{% url 'websites:single-post' %}"> <img src="{% static 'home/img/recent_post_2.png' %}" alt="Recent Post 2"> <div class="text"> 
+                                        <h6>{% trans "How to Choose the Right Clinic Abroad" %}</h6> <span>{% trans "August 15, 2024" %}</span> 
+                                    </div>  
+                            </li>
+                        </a>                         
+                        <li><a href="{% url 'websites:single-post' %}"> <img src="{% static 'home/img/recent_post_3.png' %}" alt="Recent Post 3"> <div class="text"> 
+                                    <h6>The Benefits of {% trans "Dental Implants" %}</h6> <span>{% trans "August 10, 2024" %}</span> 
+                                </div>  
+                        </li>
+                    </a>                     
+                </ul>                 
+            </div>             
+            <div class="categories"> 
+                <div class="sidebar-heding"> 
+                    <h2>{% trans "Categories" %}</h2> 
+                </div>                 
+                <ul> 
+                    <li><a href="{% url 'websites:single-post' %}">> {% trans "Dental Implants" %} (7)</a></li>                     
+                    <li><a href="{% url 'websites:single-post' %}">{% trans "> Medical Tourism (9)" %}</a></li>                     
+                    <li><a href="{% url 'websites:single-post' %}">> {% trans "Patient Stories" %} (14)</a></li>                     
+                    <li><a href="{% url 'websites:single-post' %}">> {% trans "Cost Savings" %} (6)</a></li>                     
+                    <li><a href="{% url 'websites:single-post' %}">{% trans "> Clinics (5)" %}</a></li>                     
+                </ul>                 
+            </div>             
+            <div class="latest-gallery"> 
+                <div class="sidebar-heding"> 
+                    <h2>{% trans "Latest Gallery" %}</h2> 
+                </div>                 
+                <ul>
+                    <li>
+                        <a href="{% url 'websites:single-post' %}">
+                            <img src="{% static 'home/img/dental_implants_gallery_1.png' %}" alt="">
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="{% url 'websites:single-post' %}">
+                            <img src="{% static 'home/img/dental_implants_gallery_2.png' %}" alt="">
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="{% url 'websites:single-post' %}">
+                            <img src="{% static 'home/img/dental_implants_gallery_3.png' %}" alt="">
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="{% url 'websites:single-post' %}">
+                            <img src="{% static 'home/img/dental_implants_gallery_4.png' %}" alt="">
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="{% url 'websites:single-post' %}">
+                            <img src="{% static 'home/img/dental_implants_gallery_5.png' %}" alt="">
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="{% url 'websites:single-post' %}">
+                            <img src="{% static 'home/img/dental_implants_gallery_6.png' %}" alt="">
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="{% url 'websites:single-post' %}">
+                            <img src="{% static 'home/img/dental_implants_gallery_7.png' %}" alt="">
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="{% url 'websites:single-post' %}">
+                            <img src="{% static 'home/img/dental_implants_gallery_8.png' %}" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>   
+        </div>         
+    </div> 
+</div>  
+</div>       
+<footer> 
+        <div class="col"> 
+            <p>Copyright &copy; 2024 Dent i-Delil Clinic
+ 
+    | Designed by Lotfi K</p> 
+        </div>         
+    </div>     
+</footer> 
+<!-- Modal button --> 
+<div class="popup-icon"> 
+    <button id="modBtn" class="modal-btn">
+        <img src="{% static 'home/img/contact-icon.png' %}" alt="">
+    </button>     
+</div> 
+<!-- Modal --> 
+<div id="modal" class="modal"> 
+    <!-- Modal Content -->     
+    <div class="modal-content"> 
+        <!-- Modal Header -->         
+        <div class="modal-header"> 
+            <h3 class="header-title">Contact {% trans "MedTour Dental" %}</h3> 
+            <div class="close-btn">
+                <img src="{% static 'home/img/close_contact.png' %}" alt="">
+            </div>             
+        </div>         
+        <!-- Modal Body -->         
+        <div class="modal-body"> 
+            <div class="col-md-6 col-md-offset-3"> 
+                <form id="contact" action="" method="post"> 
+                    <div class="row"> 
+                        <div class="col-md-12"> 
+                            <fieldset> 
+                                <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required=""> 
+                            </fieldset>                             
+                        </div>                         
+                        <div class="col-md-12"> 
+                            <fieldset> 
+                                <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required=""> 
+                            </fieldset>                             
+                        </div>                         
+                        <div class="col-md-12"> 
+                            <fieldset> 
+                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea> 
+                            </fieldset>                             
+                        </div>                         
+                        <div class="col-md-12"> 
+                            <fieldset> 
+                                <button type="submit" id="form-submit" class="btn">{% trans "Send Message Now" %}</button>                                 
+                            </fieldset>                             
+                        </div>                         
+                    </div>                     
+                </form>                 
+            </div>             
+        </div>         
+    </div>     
+</div> 
+<section class="overlay-menu"> 
+    <div class="container"> 
+        <div class="row"> 
+            <div class="main-menu"> 
+                <ul> 
+                    <li> <a href="{% url 'websites:home' %}">{% trans "Home" %}</a></li>                     
+                    <li> <a href="{% url 'websites:about' %}">{% trans "About Us" %}</a></li>                     
+                    <li> <a href="{% url 'websites:blog' %}">{% trans "Blog" %}</a></li>       
+                    <li> <a href="{% url 'app:login' %}">{% trans "DASHBOARD LOGIN" %}</a></li>                     
+    
+                </ul>                 
+                <p>{% trans "Your smile, our priority. Affordable dental care abroad." %}</p> 
+            </div>              
+        </div>         
+    </div>     
+</section> 
+{% endblock content %}
+{% block javascripts %}      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>         
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>     
+<script src="{% static 'home/js/vendor/bootstrap.min.js' %}"></script>         
+<script src="{% static 'home/js/plugins.js' %}"></script>         
+<script src="{% static 'home/js/main.js' %}"></script>
+{% endblock javascripts %}         

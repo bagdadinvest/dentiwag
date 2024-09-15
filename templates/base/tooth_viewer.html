@@ -1,0 +1,56 @@
+{% load static i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Tooth Model</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.146.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.146.0/examples/js/loaders/STLLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.146.0/examples/js/controls/OrbitControls.js"></script>
+
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const loader = new THREE.STLLoader();
+        let mesh;
+
+        loader.load('{% static "models/STEP1.stl" %}', function (geometry) {
+            const material = new THREE.MeshNormalMaterial();
+            mesh = new THREE.Mesh(geometry, material);
+            mesh.scale.set(0.1, 0.1, 0.1);  // Adjust the scale factor here
+            scene.add(mesh);
+            camera.position.z = 5;
+            animate();
+        });
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Rotate the model
+            if (mesh) {
+                mesh.rotation.y += 0.01;  // Rotate on the Y-axis
+                mesh.position.x = Math.sin(Date.now() * 0.001) * 2;  // Oscillate left and right
+            }
+
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
+</body>
+</html>

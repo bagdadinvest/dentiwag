@@ -1,0 +1,224 @@
+{% extends 'sitebase.html' %}
+{% load static i18n %}
+{% block content %}
+    <nav>
+        <div class="logo">
+            <a href="{% url 'websites:home' %}">{% trans "MedTour Dental" %}</a>
+        </div>
+      <div class="menu-icon">
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="page-heading">
+        <div class="container">
+            <div class="heading-content">
+                <h1>{% trans "Dental Implants: A New Smile Abroad" %}</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="blog-entries">
+        <div class="container">
+            <div class="col-md-9">
+                <div class="blog-posts">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="single-blog-post">
+                                <img src="{% static 'home/img/dental_implants_blog_1.png' %}" alt="{% trans "Dental Implants" %}">
+                                <div class="text-content">
+                                    <h2>{% trans "Why Get Dental Implants Abroad?" %}</h2>
+                                    <span><a href="{% static 'home/#' %}">{% trans "Admin" %}</a>{% trans "/" %}<a href="{% static 'home/#' %}">{% trans "24 August 2024" %}</a>{% trans "/" %}<a href="{% static 'home/#' %}">{% trans "Dental Implants" %}</a></span>
+                                    <p>{% trans "Dental implants are a life-changing solution for those with missing or damaged teeth, but the cost can be a barrier. By choosing to get your implants through medical tourism, you can access world-class dental care at a fraction of the price. Countries like Turkey, Mexico, and Thailand offer highly qualified dentists and state-of-the-art facilities." %}<br><br>{% trans "This post explores the benefits of traveling abroad for dental implants, including cost savings, quality of care, and the added bonus of exploring a new country while improving your smile." %}<br><br>{% trans "Learn about patient experiences, the steps involved in the process, and tips for choosing the right clinic and destination for your dental needs." %}<br><br><a href="{% url 'websites:blog' %}">{% trans "Back to Blog" %}</a></p>
+                                    <div class="tags-share">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <ul class="tags">
+                                                    <li>{% trans "Tags:" %}</li>
+                                                    <li><a href="{% static 'home/#' %}">{% trans "Dental Care" %}</a>{% trans "," %}</li>
+                                                    <li><a href="{% static 'home/#' %}">{% trans "Medical Tourism" %}</a>{% trans "," %}</li>
+                                                    <li><a href="{% static 'home/#' %}">{% trans "Affordable Implants" %}</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <ul class="share">
+                                                    <li>{% trans "Share:" %}</li>
+                                                    <li><a href="{% static 'home/#' %}">{% trans "facebook" %}</a>{% trans "," %}</li>
+                                                    <li><a href="{% static 'home/#' %}">{% trans "twitter" %}</a>{% trans "," %}</li>
+                                                    <li><a href="{% static 'home/#' %}">{% trans "linkedin" %}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="side-bar">
+                    <div class="search">
+                        <fieldset>
+                            <input name="search" type="text" class="form-control" id="search" placeholder="{% trans "Search..." %}" required="">
+                        </fieldset>
+                    </div>
+                    <div class="archives">
+                        <div class="sidebar-heding">
+                            <h2>{% trans "Archives" %}</h2>
+                        </div>
+                        <ul>
+                            <li><a href="{% static 'home/#' %}">{% trans "> August 2024 (4)" %}</a></li>
+                            <li><a href="{% static 'home/#' %}">{% trans "> July 2024 (16)" %}</a></li>
+                            <li><a href="{% static 'home/#' %}">{% trans "> June 2024 (5)" %}</a></li>
+                            <li><a href="{% static 'home/#' %}">{% trans "> May 2024 (3)" %}</a></li>
+                            <li><a href="{% static 'home/#' %}">{% trans "> April 2024 (27)" %}</a></li>
+                        </ul>
+                    </div>
+                    <div class="recent-posts">
+                        <div class="sidebar-heding">
+                            <h2>{% trans "Recent Posts" %}</h2>
+                        </div>
+                        <ul>
+                            <li><a href="{% url 'websites:single-post' %}">
+                                <img src="{% static 'home/img/recent_post_1.png' %}" alt="{% trans "Recent Post 1" %}">
+                                <div class="text">
+                                    <h6>{% trans "Top Destinations for Dental Implants" %}</h6>
+                                    <span>{% trans "20 August 2024" %}</span>
+                                </div>
+                            </li></a>
+                            <li><a href="{% url 'websites:single-post' %}">
+                                <img src="{% static 'home/img/recent_post_2.png' %}" alt="{% trans "Recent Post 2" %}">
+                                <div class="text">
+                                    <h6>{% trans "Choosing the Right Clinic Abroad" %}</h6>
+                                    <span>{% trans "15 August 2024" %}</span>
+                                </div>
+                            </li></a>
+                            <li><a href="{% url 'websites:single-post' %}">
+                                <img src="{% static 'home/img/recent_post_3.png' %}" alt="{% trans "Recent Post 3" %}">
+                                <div class="text">
+                                    <h6>{% trans "Benefits of Dental Implants" %}</h6>
+                                    <span>{% trans "10 August 2024" %}</span>
+                                </div>
+                            </li></a>
+                        </ul>
+                    </div>
+                    <div class="categories">
+                        <div class="sidebar-heding">
+                            <h2>{% trans "Categories" %}</h2>
+                        </div>
+                        <ul>
+                            <li><a href="{% static 'home/#' %}">{% trans "> Dental Implants (7)" %}</a></li>
+                            <li><a href="{% static 'home/#' %}">{% trans "> Medical Tourism (9)" %}</a></li>
+                            <li><a href="{% static 'home/#' %}">{% trans "> Patient Stories (14)" %}</a></li>
+                            <li><a href="{% static 'home/#' %}">{% trans "> Cost Savings (6)" %}</a></li>
+                            <li><a href="{% static 'home/#' %}">{% trans "> Clinics (5)" %}</a></li>
+                        </ul>
+                    </div>
+                    <div class="latest-gallery">
+                        <div class="sidebar-heding">
+                            <h2>{% trans "Latest Gallery" %}</h2>
+                        </div>
+                        <ul>
+                            <li><a href="{% static 'home/#' %}"></a><img src="{% static 'home/img/dental_implants_gallery_1.png' %}" alt="{% trans "Dental Implants Gallery 1" %}"></a></li>
+                            <li><a href="{% static 'home/#' %}"></a><img src="{% static 'home/img/dental_implants_gallery_2.png' %}" alt="{% trans "Dental Implants Gallery 2" %}"></a></li>
+                            <li><a href="{% static 'home/#' %}"></a><img src="{% static 'home/img/dental_implants_gallery_3.png' %}" alt="{% trans "Dental Implants Gallery 3" %}"></a></li>
+                            <li><a href="{% static 'home/#' %}"></a><img src="{% static 'home/img/dental_implants_gallery_4.png' %}" alt="{% trans "Dental Implants Gallery 4" %}"></a></li>
+                            <li><a href="{% static 'home/#' %}"></a><img src="{% trans "Dental Implants Gallery 5" %}" alt=""></a></li>
+                            <li><a href="{% static 'home/#' %}"></a><img src="{% static 'home/img/dental_implants_gallery_6.png' %}" alt="{% trans "Dental Implants Gallery 6" %}"></a></li>
+                            <li><a href="{% static 'home/#' %}"></a><img src="{% static 'home/img/dental_implants_gallery_7.png' %}" alt="{% trans "Dental Implants Gallery 7" %}"></a></li>
+                            <li><a href="{% static 'home/#' %}"></a><img src="{% static 'home/img/dental_implants_gallery_8.png' %}" alt="{% trans "Dental Implants Gallery 8" %}"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <p>{% trans "Copyright &copy; 2024 MedTour Dental" %}
+    
+    | {% trans "Designed by TemplateMo" %}</p>
+            </div>
+        </div>
+    </footer>
+
+
+      <!-- Modal button -->
+    <div class="popup-icon">
+      <button id="modBtn" class="modal-btn"><img src="{% static 'home/img/contact-icon.png' %}" alt="{% trans "Contact Icon" %}"></button>
+    </div>  
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h3 class="header-title">{% trans "Contact MedTour Dental" %}</h3>
+          <div class="close-btn"><img src="{% static 'home/img/close_contact.png' %}" alt="{% trans "Close" %}"></div>    
+        </div>
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <div class="col-md-6 col-md-offset-3">
+            <form id="contact" action="" method="post">
+                <div class="row">
+                    <div class="col-md-12">
+                      <fieldset>
+                        <input name="name" type="text" class="form-control" id="name" placeholder="{% trans "Your name..." %}" required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <input name="email" type="email" class="form-control" id="email" placeholder="{% trans "Your email..." %}" required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="{% trans "Your message..." %}" required=""></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="btn">{% trans "Send Message Now" %}</button>
+                      </fieldset>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <section class="overlay-menu">
+      <div class="container">
+        <div class="row">
+            <div class="main-menu"> 
+                <ul> 
+                    <li> <a href="{% url 'websites:home' %}">{% trans "Home" %}</a></li>                     
+                    <li> <a href="{% url 'websites:about' %}">{% trans "About Us" %}</a></li>                     
+                    <li> <a href="{% url 'websites:blog' %}">{% trans "Blog" %}</a></li>       
+                    <li> <a href="{% url 'app:login' %}">{% trans "DASHBOARD LOGIN" %}</a></li>                     
+    
+                </ul>                 
+                <p>{% trans "Your smile, our priority. Affordable dental care abroad." %}</p> 
+            </div>            
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endblock content %}
+    {% block javascripts %}      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>         
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>     
+    <script src="{% static 'home/js/vendor/bootstrap.min.js' %}"></script>         
+    <script src="{% static 'home/js/plugins.js' %}"></script>         
+    <script src="{% static 'home/js/main.js' %}"></script>
+    {% endblock javascripts %}         
+    

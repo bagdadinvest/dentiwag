@@ -1,0 +1,256 @@
+{% extends "sitebase.html" %}
+{% load static i18n %}
+{% block content %}
+
+<nav>
+    <div class="logo">
+        <a href="#"home>{% trans "DENT I DELIL CLINIC" %}</a>
+    </div>
+  <div class="menu-icon">
+    <span></span>
+  </div>
+</nav>
+<div class="page-heading">
+    <div class="container">
+        <div class="heading-content">
+            <h1>{% trans "About Us" %}</h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="services">
+    <div class="container">
+        <div class="col-md-4 col-sm-6">
+            <div class="service-item">
+                <div class="icon">
+                    <img src="{% static 'home/img/service_1.png alt="">
+                </div>
+                <div class="text">
+                    <h4>{% trans "Dental Implants" %}</h4>
+                    <p>{% trans "Restore your smile with our state-of-the-art dental implants. we ensure a seamless and comfortable procedure." %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="service-item">
+                <div class="icon">
+                    <img src="{% static 'home/img/service_2.png alt="">
+                </div>
+                <div class="text">
+                    <h4>{% trans "Teeth Whitening" %}</h4>
+                    <p>{% trans "Achieve a brighter smile with our professional teeth whitening services. Safe, effective, and long-lasting results." %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="service-item">
+                <div class="icon">
+                    <img src="{% static 'home/img/service_3.png alt="">
+                </div>
+                <div class="text">
+                    <h4>{% trans "Orthodontics" %}</h4>
+                    <p>{% trans "Straighten your teeth with our advanced orthodontic treatments, including braces and Invisalign." %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="service-item">
+                <div class="icon">
+                    <img src="{% static 'home/img/service_4.png alt="">
+                </div>
+                <div class="text">
+                    <h4>{% trans "Cosmetic Dentistry" %}</h4>
+                    <p>{% trans "Enhance the appearance of your teeth with our range of cosmetic dentistry services, including veneers and bonding." %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="service-item">
+                <div class="icon">
+                    <img src="{% static 'home/img/service_5.png alt="">
+                </div>
+                <div class="text">
+                    <h4>{% trans "Preventive Care" %}</h4>
+                    <p>{% trans "Maintain your oral health with regular check-ups, cleanings, and personalized care plans from our skilled team." %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="service-item">
+                <div class="icon">
+                    <img src="{% static 'home/img/service_6.png alt="">
+                </div>
+                <div class="text">
+                    <h4>{% trans "Emergency Dental Services" %}</h4>
+                    <p>{% trans "Receive prompt and efficient care for dental emergencies, including toothaches, broken teeth, and more." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="more-about-us" style="background-image: url('{% static 'home/img/hasta/' %}{{ LANGUAGE_CODE }}.jpg'); background-size: cover; background-position: center; padding: 50px 0; color: #fff;">
+    <div class="container">
+        <div class="col-md-5 col-md-offset-7 col-sm-3 col-sm-offset-3" >
+            <div class="content">
+                <h2 style="display: inline;">{% trans "John" %}</h2><h2 style="display: inline;">{% trans "'s Journey to a New Smile" %}</h2>
+                <span>{% trans "A Life-Changing Dental Experience" %}</span>
+                <p>{% trans "John" %} 
+                    {% trans "from" %} 
+                    {% trans "UK" %}   {% trans "visited us last month with severe dental issues that had been affecting their confidence and quality of life. After a comprehensive treatment plan, including dental implants and restorative procedures," %} {% trans "John" %} {% trans " now smiles with confidence and enjoys a pain-free life." %}</p>
+                <br>
+                <div class="simple-btn">
+                    <a href="#">{% trans "Read More Patient Stories" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pricing-tables">
+    <div class="container">
+        <div class="col-md-4 col-sm-6">
+            <div class="table-item">
+                <h4>{% trans "$250/Procedure" %}</h4>
+                <span>{% trans "Single Tooth Implant" %}</span>
+                <ul>
+                    <li>{% trans "Initial Consultation" %}</li>
+                    <li>{% trans "Implantation Procedure" %}</li>
+                    <li>{% trans "Follow-Up Care" %}</li>
+                </ul>
+                <div class="simple-btn">
+                    <a href="#"about>{% trans "Details" %}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="table-item premium-item">
+                <h4>{% trans "$420/Procedure" %}</h4>
+                <span>{% trans "Multiple Tooth Implant" %}</span>
+                <ul>
+                    <li>{% trans "Initial Consultation" %}</li>
+                    <li>{% trans "Multiple Implantation Procedures" %}</li>
+                    <li>{% trans "Comprehensive Follow-Up Care" %}</li>
+                </ul>
+                <div class="simple-btn">
+                    <a href="#"about>{% trans "Details" %}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="table-item">
+                <h4>{% trans "$750/Procedure" %}</h4>
+                <span>{% trans "Full Mouth Restoration" %}</span>
+                <ul>
+                    <li>{% trans "Comprehensive Consultation" %}</li>
+                    <li>{% trans "Full Dental Restoration" %}</li>
+                    <li>{% trans "Dedicated Follow-Up Support" %}</li>
+                </ul>
+                <div class="simple-btn">
+                    <a href="#"about>{% trans "Details" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer=>
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <p>Copyright &copy; 2024 DENT I DELIL  CLINIC | Designed by LOTFI KANOUNI</p> 
+        </div>
+    </div>
+</footer>
+
+
+  <!-- Modal button -->
+<div class="popup-icon">
+  <button id="modBtn" class="modal-btn"><img src="{% static 'home/img/contact-icon.png alt=""></button>
+</div>  
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <!-- Modal Content -->
+  <div class="modal-content">
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h3 class="header-title">{% trans "Say hello to Highway" %}</h3>
+      <div class="close-btn"><img src="{% static 'home/img/close_contact.png alt=""></div>    
+    </div>
+    <!-- Modal Body -->
+    <div class="modal-body">
+      <div class="col-md-6 col-md-offset-3">
+        <form id="contact" action="" method="post">
+            <div class="row">
+                <div class="col-md-12">
+                  <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="btn">{% trans "Send Message Now" %}</button>
+                  </fieldset>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="overlay-menu">
+  <div class="container">
+    <div class="row">
+      <div class="main-menu">
+          <ul>
+              <li>
+                  <a href="#">{% trans "Home - Full-width" %}</a>
+              </li>
+              <li>
+                  <a href="#">{% trans "Home - Masonry" %}</a>
+              </li>
+              <li>
+                  <a href="#" >{% trans "Home - Small-width" %}</a>
+              </li>
+              <li>
+                  <a href="#" >{% trans "About Us" %}</a>
+              </li>
+              <li>
+                  <a href="#" >{% trans "Blog Entries" %}</a>
+              </li>
+              <li>
+                  <a href="#" >{% trans "Single Post" %}</a>
+              </li>
+          </ul>
+          <p>{% trans "We create awesome templates for you" %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'home/https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js></script>
+<script>window.jQuery || document.write('<script src="{% static 'home/js/vendor/jquery-1.11.2.min.js><\/script>')</script>
+
+<script src="{% static 'home/js/vendor/bootstrap.min.js></script>
+
+<script src="{% static 'home/js/plugins.js></script>
+<script src="{% static 'home/js/main.js></script>
+
+{% endblock content %}
+{% block javascripts %}      
+{% endblock javascripts %}         

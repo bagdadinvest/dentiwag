@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags navigation_tags wagtailimages_tags %}
+
+{% block title %}
+    {% if tag %}
+        {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}: {{ tag }}
+    {% else %}
+        {{ self.seo_title|default:self.title }}
+    {% endif %}
+{% endblock %}
+
+{% block search_description %}
+    {% if tag %}
+        Viewing all blog posts sorted by the tag {{ tag }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if not tag %}
+        {% include "base/include/header-index.html" %}
+    {% endif %}
+
+    <div class="blog-intro">
+        <div class="container">
+
+        <div class="heading-content">
+            <div class="d-flex align-items-center justify-content-between" style="width: 50%;">
+                <!-- Introduction text -->
+                {% if page.introduction %}
+                    <span class="intro-text" style="margin-right: 10px;">{{ page.introduction }}</span> <!-- Add margin if needed -->
+                {% endif %}
+                
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs-container">
+                    {% block breadcrumbs %}
+                    {% breadcrumbs %}
+                    {% endblock breadcrumbs %}
+                </div>
+            </div>
+        </div>
+    </div>
+                     <div class="blog-entries">
+        <div class="container">
+            <div class="row"> <!-- Ensure row wrapper is added -->
+                <div class="col-md-9">
+                    <div class="blog-posts">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {% for blog in posts %}
+                                    {% include "includes/card/blog-listing-card.html" %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="side-bar">
+                        <div class="search">
+                            <fieldset>
+                                <form action="/search" method="get" role="search">
+                                <input name="search" type="text" class="form-control" id="search-input" placeholder="Search..." required="" autocomplete="off" name="q">
+                                </form> 
+                            </fieldset>
+                        </div>
+                        <div class="categories">
+                            <div class="sidebar-heding">
+                                <h2>Categories</h2>
+                            </div>
+                            {% if tag %}
+                            <div class="col-md-12">
+                                <p class="index-header__introduction">Viewing all blog posts sorted by the tag <span class="blog-tags__tag">{{ tag }}</span>.</p>
+                            </div>
+                            {% endif %}
+                            {% if page.get_child_tags %}
+                            <ul>
+                                {% for tag in page.get_child_tags %}
+                                <li><a class="blog-tags__pill" aria-label="Filter by tag name {{ tag }}" href="{{ tag.url }}"> > {{ tag }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </div>
+                        <div class="latest-gallery">
+                            <div class="sidebar-heding">
+                                <h2>Latest Gallery</h2>
+                            </div>
+                            <ul>
+                                {% if page.gallery_images.count > 0 %}
+                                    {% for gallery_image in page.gallery_images.all %}
+                                        <li>
+                                            <a href="{{ gallery_image.image.url }}"> <!-- Link to the full-size image -->
+                                                {% image gallery_image.image fill-200x150 %} <!-- Thumbnail rendition -->
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                {% else %}
+                                    <li>No images available for this gallery.</li>
+                                {% endif %}
+                            </ul>
+                        </div>
+zz                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

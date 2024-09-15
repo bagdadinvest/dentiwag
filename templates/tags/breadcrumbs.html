@@ -1,0 +1,21 @@
+{% load wagtailcore_tags %}
+
+{% if ancestors %}
+    <ul style="list-style: none; padding: 10px; margin: 10px;">
+        {% for ancestor in ancestors %}
+            <li style="display: inline;">
+                {% if forloop.last %}
+                    <!-- The current page breadcrumb -->
+                    <span aria-current="page" style="color: goldenrod;">{{ ancestor.title }}</span>
+                {% else %}
+                    <a href="{% pageurl ancestor %}" 
+                       style="color: {% if forloop.first %}white{% else %}goldenrod{% endif %};">
+                        <!-- Change 'Home' to white, others to golden -->
+                        {% if forloop.first %}Home{% else %}{{ ancestor.title }}{% endif %}
+                    </a>
+                    <span style="color: goldenrod;"> &gt;</span> <!-- The '>' symbol in gold -->
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

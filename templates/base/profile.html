@@ -1,0 +1,230 @@
+{% extends 'sitebase.html' %}
+{% load static i18n %}
+{% block content %}
+        <nav data-pgc-define="navigation" data-pgc-define-name="Navigation Bar" data-pgc-define-description="A responsive navigation bar with a logo and menu icon."> 
+            <div class="logo"> <a href="{% url 'websites:index' %}">{% trans "BEYONDCLINIC" %}</a> 
+            </div>             
+            <div class="menu-icon"> <span></span> 
+            </div>             
+        </nav>         
+        <div id="video-container"> 
+            <div class="video-overlay"></div>             
+            <div class="video-content"> 
+                <div class="inner"> 
+                    <h1>BEYOND&nbsp;CLINIC</h1> 
+                    <p>{% trans "MEDICAL TOURISM SERVICES PROVIDER" %}</p> 
+                    <p>{% trans "xxx" %}</p> 
+                    <div class="scroll-icon"> <a class="scrollTo" data-scrollTo="portfolio" href="{% static 'home/#' %}"><img src="{% static 'home/img/scroll-icon.png' %}" alt=""></a> 
+                    </div>                     
+                </div>                 
+            </div>             
+            <video autoplay="" loop="" muted> 
+                <source src="{% static 'home/highway-loop.mp4' %}" type="video/mp4"/> 
+            </video>             
+        </div>         
+        <div class="grid-portfolio" id="portfolio"> 
+            <div class="container"> 
+                <div class="col-md-4 col-sm-6"> 
+                    <div class="portfolio-item"> <a href="{% url 'websites:blog' %}"> <div class="thumb"> 
+                                <div class="hover-effect"> 
+                                    <div class="hover-content"> 
+                                        <h1>{% trans "INNOVATIVE SOLUTIONS" %}</h1> 
+                                        <p>REVOLUTIONIZING MEDICAL TOURISM&nbsp;</p> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="image"> 
+                                    <img src="{% static 'home/img/portfolio_item_4.png' %}"> 
+                                </div>                                 
+                            </div> </a> 
+                    </div>                     
+                </div>
+                <div class="col-md-4 col-sm-6"> 
+                    <div class="portfolio-item"> <a href="{% url 'websites:blog' %}"> <div class="thumb"> 
+                                <div class="hover-effect"> 
+                                    <div class="hover-content"> 
+                                        <h1>WHY&nbsp;TURKEY?</h1> 
+                                        <p>{% trans "Beyond the Bazaar" %}</p> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="image"> 
+                                    <img src="{% static 'home/img/portfolio_item_2.png' %}"> 
+                                </div>                                 
+                            </div></a> 
+                    </div>                     
+                </div>                 
+                <div class="col-md-4 col-sm-6"> 
+                    <div class="portfolio-item"><a href="{% url 'websites:blog' %}"> <div class="thumb"> 
+                                <div class="hover-effect"> 
+                                    <div class="hover-content"> 
+                                        <h1>{% trans "Why BEYOND CLINIC" %}</h1> 
+                                        <p>{% trans "HERE IS WHAT SETS US APART" %}</p> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="image"> 
+                                    <img src="{% static 'home/img/portfolio_item_3.png' %}"> 
+                                </div>                                 
+                            </div></a> 
+                    </div>                     
+                </div>                 
+                <div class="col-md-4 col-sm-6"> 
+                    <div class="portfolio-item"> <a href="{% url 'websites:about' %}"> <div class="thumb"> 
+                                <div class="hover-effect"> 
+                                    <div class="hover-content"> 
+                                        <h1>DENTAL&nbsp;COSMETICS</h1> 
+                                        <p>{% trans "ALL YOU NEED TO KNOW IS THIS" %}</p> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="image"> 
+                                    <img src="{% static 'home/img/portfolio_item_1.png' %}"> 
+                                </div>                                 
+                            </div></a> 
+                    </div>                     
+                </div>                 
+                <div class="col-md-4 col-sm-6"> 
+                    <div class="portfolio-item"><a href="{% url 'websites:about' %}"> <div class="thumb"> 
+                                <div class="hover-effect"> 
+                                    <div class="hover-content"> 
+                                        <h1>HAIR&nbsp;RESTORATION</h1> 
+                                        <p>{% trans "Beyond Baldness" %}</p> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="image"> 
+                                    <img src="{% static 'home/img/portfolio_item_5.png' %}"> 
+                                </div>                                 
+                            </div></a> 
+                    </div>                     
+                </div>                 
+                <div class="col-md-4 col-sm-6"> 
+                    <div class="portfolio-item"> <a href="{% url 'websites:about' %}"> <div class="thumb"> 
+                                <div class="hover-effect"> 
+                                    <div class="hover-content"> 
+                                        <h1>{% trans "AESTHETIC SURGERIES" %}</h1> 
+                                        <p>{% trans "SCULPT YOUR DREAM" %}</p> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="image"> 
+                                    <img src="{% static 'home/img/portfolio_item_6.png' %}"> 
+                                </div>                                 
+                            </div></a> 
+                    </div>                     
+                </div>                 
+                <div class="col-md-4 col-sm-6"> 
+                    <div class="portfolio-item"> <a href="{% url 'app:login' %}"><div class="thumb"> 
+                                <div class="hover-effect"> 
+                                    <div class="hover-content"> 
+                                        <h1>{% trans "DASHBOARD LOGIN" %}</h1> 
+                                        <p>{% trans "CHECK IT FOR YOURSELF" %}</p> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="image"> 
+                                    <img src="{% static 'home/img/portfolio_item_7.png' %}"> 
+                                </div>                                 
+                            </div></a> 
+                    </div>                     
+                </div>                 
+                <div class="col-md-4 col-sm-6"> 
+                    <div class="portfolio-item"> <a href="{% url 'app:login' %}"><div class="thumb"> 
+                                <div class="hover-effect"> 
+                                    <div class="hover-content"> 
+                                        <h1>PATIENTS&apos;&nbsp;DASHBOARD</h1> 
+                                        <p>YOU HAVE THE RIGHT TO BE IN&nbsp; CONTROL&nbsp;</p> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="image"> 
+                                    <img src="{% static 'home/img/portfolio_item_8.png' %}"> 
+                                </div>                                 
+                            </div></a> 
+                    </div>                     
+                </div>                 
+                <div class="col-md-4 col-sm-6"> 
+                    <div class="portfolio-item"> <a href="{% url 'websites:single-post' %}"><div class="thumb"> 
+                                <div class="hover-effect"> 
+                                    <div class="hover-content"> 
+                                        <h1>MORE&nbsp;BLOGS</h1> 
+                                        <p>{% trans "IF YOU WANT FURHTHER RESOURCES" %}</p> 
+                                    </div>                                     
+                                </div>                                 
+                                <div class="image"> 
+                                    <img src="{% static 'home/img/portfolio_item_9.png' %}"> 
+                                </div>                                 
+                            </div></a> 
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+        <footer> 
+            <div class="container-fluid"> 
+                <div class="col-md-12"> 
+                    <p>Copyright &copy; 2024 BEYOND CLINIC | Designed by LOTFI KANOUNI</p> 
+                </div>                 
+            </div>             
+        </footer>         
+        <!-- Modal button -->         
+        <div class="popup-icon"> 
+            <button id="modBtn" class="modal-btn">
+                <img src="{% static 'home/img/contact-icon.png' %}" alt="">
+            </button>             
+        </div>         
+        <!-- Modal -->         
+        <div id="modal" class="modal"> 
+            <!-- Modal Content -->             
+            <div class="modal-content"> 
+                <!-- Modal Header -->                 
+                <div class="modal-header"> 
+                    <h3 class="header-title">{% trans "Say hello to Beyond!" %}</h3> 
+                    <div class="close-btn">
+                        <img src="{% static 'home/img/close_contact.png' %}" alt="">
+                    </div>                     
+                </div>                 
+                <!-- Modal Body -->                 
+                <div class="modal-body"> 
+                    <div class="col-md-6 col-md-offset-3"> 
+                        <form id="contact" action="" method="post"> 
+                            <div class="row"> 
+                                <div class="col-md-12"> 
+                                    <fieldset> 
+                                        <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required=""> 
+                                    </fieldset>                                     
+                                </div>                                 
+                                <div class="col-md-12"> 
+                                    <fieldset> 
+                                        <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required=""> 
+                                    </fieldset>                                     
+                                </div>                                 
+                                <div class="col-md-12"> 
+                                    <fieldset> 
+                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea> 
+                                    </fieldset>                                     
+                                </div>                                 
+                                <div class="col-md-12"> 
+                                    <fieldset> 
+                                        <button type="submit" id="form-submit" class="btn">{% trans "Send Message Now" %}</button>                                         
+                                    </fieldset>                                     
+                                </div>                                 
+                            </div>                             
+                        </form>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>        
+        <section class="overlay-menu"> 
+            <div class="container"> 
+                <div class="row"> 
+                    <div class="main-menu"> 
+                        <ul> 
+                            <li> <a href="{% url 'websites:index' %}">{% trans "Home" %}</a></li>                     
+                            <li> <a href="{% url 'websites:about' %}">{% trans "About Us" %}</a></li>                     
+                            <li> <a href="{% url 'websites:blog' %}">{% trans "Blog" %}</a></li>       
+                            <li> <a href="{% url 'app:login' %}">{% trans "DASHBOARD LOGIN" %}</a></li>                     
+            
+                        </ul>                 
+                        <p>{% trans "Your smile, our priority. Affordable dental care abroad." %}</p> 
+                    </div>             
+                </div>         
+            </div>     
+        </section> 
+         
+        {% endblock content %}
+        {% block javascripts %}      
+        {% endblock javascripts %}         
+        
